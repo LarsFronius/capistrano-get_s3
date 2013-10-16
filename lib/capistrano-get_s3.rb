@@ -1,0 +1,1 @@
+require "capistrano-get_s3/version"

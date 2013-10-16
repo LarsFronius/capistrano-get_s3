@@ -18,7 +18,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just add following to your deploy.rb
+```
+set :scm, :get_s3
+set :aws_access_key_id, 'foo'
+set :aws_secret_access_key, 'bar'
+set :filename, 'my-codebase.tar.gz'
+set :bucket, 'codebase-bucket'
+set :bucket_region, 'EU'
+```
 
 ## Contributing
 
