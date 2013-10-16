@@ -1,5 +1,4 @@
 require "capistrano/recipes/deploy/scm/base"
-require "fog"
 require "tempfile"
 
 module Capistrano
