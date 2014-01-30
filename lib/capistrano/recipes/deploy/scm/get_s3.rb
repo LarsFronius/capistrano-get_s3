@@ -28,7 +28,7 @@ module Capistrano
           end
           execute << "mkdir -p #{destination}"
           execute << "s3cmd -c $cfgfile get s3://#{configuration[:bucket]}/#{configuration[:filename]} $tmpdir/#{configuration[:filename]}"
-          execute << "tar xvfh $tmpdir/#{configuration[:filename]} -C #{destination}"
+          execute << "tar xfh $tmpdir/#{configuration[:filename]} -C #{destination}"
           execute << "rm -rf $tmpdir $cfgfile"
 
           execute.join(' && ')
